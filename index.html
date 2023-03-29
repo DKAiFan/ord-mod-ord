@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Password Protected Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Indtast Password</h1>
+    <form>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <button type="submit">Submit</button>
+    </form>
+    
+    <!-- Hidden content that will only be visible after entering the correct password -->
+    <div id="hidden-content" style="display:none">
+      <h2><a href="index.html"> Tryk her</a></h2>
+
+    </div>
+    
+    <script>
+      // Add event listener to the form submission
+      document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // prevent default form submission behavior
+        
+        // Check if password is correct (change "password123" to desired password)
+        if (document.getElementById('password').value === 'password123') {
+          // Show the hidden content
+          document.getElementById('hidden-content').style.display = 'block';
+          
+          // Clear the password input field
+          document.getElementById('password').value = '';
+        } else {
+          // Show error message
+          alert('Incorrect password. Please try again.');
+          
+          // Clear the password input field
+          document.getElementById('password').value = '';
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
