@@ -20,9 +20,28 @@ padding: 2rem;
 }
 
 .box {
-  max-width: 80%;
-  margin: 0 auto;
+  max-width: 50%;
+  min-width: 450px;
+  min-height: 350px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 2rem auto;
 }
+
+.medie {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+
+}
+
+.text {
+  line-height: 2rem;}
+  
 
 table {
   table-layout: fixed;
@@ -123,9 +142,7 @@ li a:active {
   font-weight: 300;
 }
 
-.text {
-  line-height: 2rem;}
-  
+
 
 
 /* MEMBER ======================================================================================================*/
@@ -175,7 +192,7 @@ button[type="submit"]:hover {
 /* MEDIER ======================================================================================================*/
 
 iframe {
-  width: 80%;
-  height: 400px;
+  width: 100%;
+ 
   border: 1px solid #ccc;
 }
